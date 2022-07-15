@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="logo.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>3D WebSite</title>
+</head>
+<body>
+    <div class="red">
+        <div class="prodect">
+
+            <img src="pic/shoes.png" id="frontimg">
+            <img src="pic/shoes2.png" id="backimg">
+
+            <div class="proin" id="probox">
+                <div class="profo">
+                    <div class="protop">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="probot">
+                        <p>Nike running shoes</p>
+                        <h2>Air Zoom Winflo 6</h2>
+                        <h1>150 <span>₹</span> </h1>
+                        <button type="button"> Add to cart</button>
+                        <div class="color">
+                            <div class="select">
+                                <img src="pic/shoes-icon.png">
+                            </div>
+                            <div class="select">
+                                <img src="pic/shoes-icon2.png" onclick="flipRight()">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                <div class="proba">
+                    <div class="protop protop2">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="probot">
+                        <p>Nike running shoes</p>
+                        <h2>Air Zoom Winflo 6</h2>
+                        <h1>150 <span>₹</span> </h1>
+                        <button type="button">Add to cart</button>
+                        <div class="color">
+                            <div class="select">
+                                <img src="pic/shoes-icon.png" onclick="filpleft()">
+                            </div>
+                            <div class="select">
+                                <img src="pic/shoes-icon2.png">
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="left"></div>
+                <div class="right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var probox = document.getElementById("probox");
+        var frontimg = document.getElementById("frontimg");
+        var backimg = document.getElementById("backimg");
+
+        function flipRight(){
+            probox.style.transform = "rotateY(180deg)";
+            frontimg.style.left = "650px";
+            backimg.style.left = "20px"
+            frontimg.style.transform = "rotate(-30deg)";
+            backimg.style.transform = "rotate(0deg)";
+        }
+
+        function filpleft(){
+            probox.style.transform = "rotateY(0deg)";
+            frontimg.style.left = "20px";
+            backimg.style.left = "-650px"
+            frontimg.style.transform = "rotate(0deg)";
+            backimg.style.transform = "rotate(-30deg)";
+        }
+    </script>
+</body>
+</html>
